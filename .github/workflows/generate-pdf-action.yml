@@ -1,0 +1,33 @@
+name: Generate & Push PDF
+on:
+  push:
+    branches:
+      - '**'        # Match all branches
+      # - '!master'   # Exclude master branch
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: mmayer.tex
+      
+      - name: commit files
+        run: |
+          mv mmayer.pdf resume.pdf
+          rm mmayer.pdf
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "Upload PDF file" --allow-empty)
+  
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: ${{ github.ref_name }} 
