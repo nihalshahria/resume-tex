@@ -1,0 +1,127 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\ifxetexorluatex
+  \setmainfont{Carlito}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\addbibresource{sample.bib}
+\usepackage[hidelinks=false,colorlinks=false,linkcolor=black,citecolor=black]{hyperref}
+\RequirePackage{fontawesome}
+\begin{document}
+\name{Md. Shahria Islam Nihal}
+\tagline{Love to solve problems, develop and implement new ideas and learn new technologies.}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+% \photo{3.3cm}{profile.jpg}
+\personalinfo{%
+	% Not all of these are required!
+	% You can add your own with \printinfo{symbol}{detail}
+	\email{nihalshahria@gmail.com}
+	\phone{01646-767354}
+	%  \mailaddress{Address, Street, 00000 County}
+	%  \twitter{@marissamayer}
+	
+	\href{https://www.linkedin.com/in/nihalshahria}{\linkedin{linkedin.com/in/nihalshahria}}
+	
+	\href{https://github.com/nihalshahria}{\github{github.com/nihalshahria}}
+	
+	% \homepage{www.stopstalk.com/user/profile/nihalshahria}
+	
+	
+	\location{ Dhaka, Bangladesh}}
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+	\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{PROFESSIONAL EXPERIENCE}
+\begin{large}
+	\textbf{Software Engineer L1}, Therap (BD) Ltd. \href{https://therapbd.com/}{\faExternalLink}\newline
+	\begin{small}
+		{\textit{Mar 2024 -- Current}}
+	\end{small}
+	\smallskip\smallskip
+\end{large}
+\begin{itemize}
+	\item Worked with monorepo architecture, Spring, ReactJs, \newline Hibernate and Playwright
+	\item Learned to apply OOP and different design patterns in \newline broader level
+	\item Grew expertise in advanced version management with git
+	\item Improved teamwork and communication skill
+	\item Improved code reviewing skill
+\end{itemize}
+\smallskip
+\begin{large}
+	\textbf{Software Engineering Intern}, Orbitax \href{https://orbitax.com/}{\faExternalLink}\newline
+	\begin{small}
+		{\textit{Feb 2023 -- July 2023}}
+	\end{small}
+	\smallskip\smallskip
+\end{large}
+\begin{itemize}
+	\item Worked with micro-service architecture
+	\item Worked with data parsing and extraction using Liquid \newline templates
+	\item Learned to analyze and resolve technical issues employing problem-solving skills
+	\item Grown practical knowledge of design patterns and code \newline refactoring
+\end{itemize}
+\smallskip
+
+\cvsection{Projects}
+\begin{large}
+	\textbf{HealthHub} \href{https://github.com/nihalshahria/Health-Hub}{\faExternalLink}\smallskip\smallskip
+\end{large}
+\begin{itemize}
+	\item An web-app for online doctor and medicine Service
+	\item Built with MERN Stack
+	\item Followed REST Architecture
+	\item Used Socket.io for real-time chat and video session
+\end{itemize}\smallskip\smallskip
+    
+\begin{large}
+	\textbf{Teacher-Staff-Remuneration} \href{https://github.com/nihalshahria/Teacher-Staff-remuneration}{\faExternalLink}\smallskip\smallskip
+\end{large}
+\begin{itemize}
+	\item Built with React, ASP.NET, PostgreSQL
+	\item Worked on back-end and database design
+	\item Used Entity Framework to design and communicate with \newline the database
+	\item Used token-based authentication
+\end{itemize}\smallskip\smallskip
+\smallskip
+
+{\cvsection{Education}
+	\cvevent{B.Sc. (Engg.) in Software Engineering}{Shahjalal University of Science and Technology}{Jan 2019 -- Feb 2024}{\textit{CGPA: 3.76}}
+}
+\smallskip
+
+\cvsection{Achievements}
+\begin{itemize}
+	\item \begin{large}
+	      Ranked \textbf{top 5}, BRAC University National \smallskip 
+	              
+	      Hackathon 2021\\
+	\end{large}
+	\smallskip
+	My Team created a web solution for online doctor and \\telemedicine Service
+\end{itemize}
+
+\clearpage
+\nocite{*}
+\end{document}
