@@ -1,9 +1,8 @@
 name: Generate & Push PDF
 on:
-  push:
+  pull_request:
     branches:
-      - '**'        # Match all branches
-      # - '!master'   # Exclude master branch
+      - master 
 
 jobs:
   build_latex:
