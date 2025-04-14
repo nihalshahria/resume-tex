@@ -1,9 +1,9 @@
 name: Generate & Push PDF
 on:
-  push:
+  pull_request:
     branches:
       - '**'        # Match all branches
-      # - '!master'   # Exclude master branch
+      - '!master'   # Exclude master branch
 
 jobs:
   build_latex:
@@ -20,7 +20,6 @@ jobs:
       - name: commit files
         run: |
           mv mmayer.pdf resume.pdf
-          rm mmayer.pdf
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
